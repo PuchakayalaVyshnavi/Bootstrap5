@@ -1,0 +1,179 @@
+
+PFB the commands – 
+
+kachaturvedi@USMUMKACHATUR03 MINGW32 ~/liftJestRepo
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/kachaturvedi/.ssh/id_rsa): /c/Users/kachaturvedi/.ssh/id_rsa_secure
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/kachaturvedi/.ssh/id_rsa_secure.
+Your public key has been saved in /c/Users/kachaturvedi/.ssh/id_rsa_secure.pub.
+The key fingerprint is:
+SHA256:O3pHiL6jRH4h7E3htbtLhA/qYHbZWOZqnBPAksJ/29Q kachaturvedi@USMUMKACHATUR03
+The key's randomart image is:
++---[RSA 2048]----+
+|                 |
+|                 |
+|.o    . .        |
+|+.o. . + .       |
+|....+ O.S.       |
+|   =.&.*.E.      |
+|  +.X+O *.       |
+| o ==+o+.o.      |
+|   .+oo+oo       |
++----[SHA256]-----+
+
+
+==================================================
+
+kachaturvedi@USMUMKACHATUR03 MINGW32 ~/liftJestRepo
+$ eval `ssh-agent -s`
+Agent pid 5548
+
+=================================================
+kachaturvedi@USMUMKACHATUR03 MINGW32 ~/liftJestRepo
+$  ssh-add /c/Users/kachaturvedi/.ssh/id_rsa_secure
+Enter passphrase for /c/Users/kachaturvedi/.ssh/id_rsa_secure:
+Identity added: /c/Users/kachaturvedi/.ssh/id_rsa_secure (/c/Users/kachaturvedi/.ssh/id_rsa_secure)
+
+======================================================================================================
+Add ssh key in GitHub and Authorize Deloitte by clicking on Enable SSO
+=====================================================================================================
+kachaturvedi@USMUMKACHATUR03 MINGW32 ~/liftJestRepo
+$ git clone git@github.com:Deloitte/Lift.git
+Cloning into 'Lift'...
+
+=====================================================================================
+git checkout unit-testing
+
+=================================================================================
+To know the status :
+git status
+
+take a latest pull from remote repository 
+
+git pull -r
+
+To add modified file /folder (Please note that empty folder CANNOT be pushed) - 
+
+git add fileName
+
+git status
+
+To push changes in local repository 
+
+git commit -m "commitMessage"
+
+To push changes in remote repository 
+
+git push origin unit-testing
+
+To reset to the state in remote repository (Visible in browser)
+git reset --hard origin/unit-testing
+
+
+ls: shows the list of files
+ls -l : shows all the files with details
+git hist => shows the history thus far
+
+git mv file1 file2 => Here we are moving file1 to file2, effectively renaming file
+git rm file2 => removing or deleting the file
+touch file3 => bash command used for creating new file
+
+
+git diff commitid HEAD => compares the differnces between given commitId and last commit on the current branch i.e, HEAD
+git checkout -b updates => creating new branch name updates
+git checkout master => switching to master branch
+git merge updates => name of the branch you wish to merge with current branch i.e, master
+git branch -d updates => deleting the updates branch
+git branch -a => shows list of all the branches
+
+=============TAG============
+git conatins the tag, to associate some info with it
+git tag -a v1.0 -m "Realese 1.0"
+git tag --list => gives v1.0
+git tag -d vl.0 => deleting the tag
+
+
+==============STASH++++++++++++++
+git stash  =>temporarily saves your data safely without committing.
+git stash list
+git stash apply => apply's stashed files
+git stash pop => removes the changes from stash and applies them to your working file.
+git stash clear
+
+
+=============CREATE NEW(feature/recaptcha) FROM EXISTING BRANCH(feature/e2e)============
+git status
+git checkout -b feature/recaptcha
+git status
+git add .
+git push origin feature/recaptcha
+
+==================================================
+******create a new repo from command line
+git init
+git add .
+git commit -m "first commit"
+git branch -M master
+git remote add origin git@github.com:PuchakayalaVyshnavi/ML_154.git
+git push -u origin master
+
+
+
+==============================================================
+******** push an existing repository from the command line
+git remote add origin git@github.com:PuchakayalaVyshnavi/ML_154.git
+git branch -M master
+git push -u origin master
+
+*****************************************====================================================================
+vypuchakayala@USHYDVYPUCHAKA3 MINGW64 ~/Desktop/Git (java|MERGING)
+$ git commit -m "merging"
+fatal: cannot lock ref 'HEAD': Unable to create 'C:/Users/vypuchakayala/Desktop/Git/.git/HEAD.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+
+vypuchakayala@USHYDVYPUCHAKA3 MINGW64 ~/Desktop/Git (java|MERGING)
+$ rm -rf C:/Users/vypuchakayala/Desktop/Git/.git/HEAD.lock
+
+
+=============================================================================================
+
+
+
+Usage Error: The nearest package directory (C:\Users\vypuchakayala\Desktop\Lift\Lift\lift) doesn't seem to be part of the project declared in C:\Users\vypuchakayala.
+
+- If the project directory is right, it might be that you forgot to list Desktop/Lift/Lift/lift as a workspace.
+- If it isn't, it's likely because you have a yarn.lock or package.json file there, confusing the project root detection.
+
+$ yarn install [--json] [--immutable] [--immutable-cache] [--check-cache] [--inline-builds] [--skip-builds]
+
+C:\Users\vypuchakayala\Desktop\Lift\Lift\lift>touch yarn.lock
+'touch' is not recognized as an internal or external command,
+operable program or batch file.
+********************In git bash=> touch yarn.lock==================
+
+
+===========================================================================
+chokidar error:
+ run "yarn install " in lift and app
+===========================================
+
+//////////////////////////////////////////////
+while updating the playwright when we get the error as:
+browserType.launch: Failed to launch chromium because executable doesn't exist , Try re-installing playwright with "npm install playwright"
+
+use commands like
+npx envinfo --preset playwright
+yarn add playwright
+/////////////////////////
+
+
+
+
