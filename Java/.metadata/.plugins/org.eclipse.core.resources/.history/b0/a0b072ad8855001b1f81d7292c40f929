@@ -1,0 +1,16 @@
+public class hellojava {
+	public static void main(String[] args) {
+	int myMaxValue=Integer.MAX_VALUE;
+	byte myMinByteValue= Byte.MIN_VALUE;
+	
+		System.out.println("hello");
+		System.out.println("max value"+myMaxValue);
+		System.out.println("busted value"+(myMaxValue +1));
+		int myTotal=(myMaxValue/2);
+		byte myNewByteValue =(byte)(myMinByteValue/2);
+		System.out.println("total"+myMaxValue);
+		System.out.println("byte val"+myNewByteValue);
+		
+}
+	}
+

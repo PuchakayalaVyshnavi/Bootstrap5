@@ -1,0 +1,6 @@
+package array;
+
+public class GroceryList {
+	 private GroceryList<String> groceryList=new GroceryList<String>();
+
+}

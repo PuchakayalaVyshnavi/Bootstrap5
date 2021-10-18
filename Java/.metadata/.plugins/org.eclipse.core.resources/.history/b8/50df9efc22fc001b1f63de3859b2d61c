@@ -1,0 +1,10 @@
+package abstrac;
+
+public class Main {
+public static void  main (String[] args) {
+	Dog dog = new Dog("lucky");
+	dog.breath();
+	dog.eat();
+	
+}
+}

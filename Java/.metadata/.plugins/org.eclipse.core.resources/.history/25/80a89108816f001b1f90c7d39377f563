@@ -1,0 +1,12 @@
+package javaGenerics;
+
+public class SoccerPlayer extends Player {
+
+	public SoccerPlayer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+}

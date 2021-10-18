@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Confirmation Favourite language</title>
+</head>
+<body>
+<%
+//read form data
+String Lang= request.getParameter("language");
+//create the cookie
+Cookie theCookie=new Cookie("favouiteLanguage",Lang);
+//setting life span for cookie
+theCookie.setMaxAge(60*60*24*365);
+//send cookie to browser
+response.addCookie(theCookie);
+		
+		
+%>
+
+</body></html>

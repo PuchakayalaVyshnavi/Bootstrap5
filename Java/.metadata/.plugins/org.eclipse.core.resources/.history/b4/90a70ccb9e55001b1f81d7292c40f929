@@ -1,0 +1,31 @@
+public class hellojava {
+	public static void main(String[] args) {
+	int myMaxValue=Integer.MAX_VALUE;
+	byte myMinByteValue= Byte.MIN_VALUE;
+	
+		System.out.println("hello");
+		System.out.println("max value"+myMaxValue);
+		System.out.println("busted value"+(myMaxValue +1));
+		int myTotal=(myMaxValue/2);
+		byte myNewByteValue =(byte)(myMinByteValue/2);
+		System.out.println("total"+myMaxValue);
+		System.out.println("byte val"+myNewByteValue);
+		float y =(float)5.25;
+		float z= 2.45f;
+		char mychar='D';
+		char unichar='\u0044';
+		System.out.println(unichar );
+		double x=20.00;
+		double w=80.00;
+		double v=(x+w)*100;
+		double u=v%40.00;
+		boolean isNoRem=(u==0)?true:false;
+		if(!isNoRem) {
+		System.out.println("got some rem");	
+		}
+		
+		
+		
+}
+	}
+

@@ -1,0 +1,39 @@
+package linkedList;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+//when we use the arraylist, if we want to add something in b/w or remove,then we need to move all the elements
+//using linkedlist as all the elements are uses links, without moving we can insert and remove directly.
+public class Main {
+public static void main(String[] args) {
+	//
+//	Customer customer = new Customer("Tim",100.43);
+//	Customer anotherCustomer;
+//	anotherCustomer=customer;
+//	anotherCustomer.setBalance(200);
+//	System.out.println("name" +customer.getName()+"balance" +customer.getBalance());//2nd class effect 1st class
+
+
+LinkedList<String> placesToVisit= new LinkedList<String>();
+placesToVisit.add("India");
+placesToVisit.add("US");
+placesToVisit.add("UK");
+placesToVisit.add("London");
+placesToVisit.add("Austrila");
+placesToVisit.add("China");
+placesToVisit.add("Japan");
+printList(placesToVisit);
+
+placesToVisit.add(1,"Alice");
+printList(placesToVisit);
+
+}
+
+private static void printList(LinkedList<String> linkedList) {
+ Iterator<String> itr= linkedList.iterator(); //iterator() is part of linkedList
+ while(itr.hasNext()) {
+	 System.out.println("Now visting "+itr.next());
+ }
+	System.out.println("*******************");
+}}

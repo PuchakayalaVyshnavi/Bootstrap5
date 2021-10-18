@@ -1,0 +1,10 @@
+package javaGenerics;
+
+public class FootballPlayer {
+
+	public FootballPlayer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+}

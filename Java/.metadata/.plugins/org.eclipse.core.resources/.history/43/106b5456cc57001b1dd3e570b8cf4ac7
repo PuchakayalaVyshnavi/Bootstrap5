@@ -1,0 +1,10 @@
+
+public class Animal {
+private String name;
+private int brain;
+private int body;
+public Animal() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+}

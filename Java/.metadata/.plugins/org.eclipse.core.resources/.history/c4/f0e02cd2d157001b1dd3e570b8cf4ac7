@@ -1,0 +1,17 @@
+
+public class Dog extends Animal {
+private int eyes;
+private int legs;
+private int tail;
+	public Dog(String name, int body,int eyes,int legs, int tail) {
+		super(name, 1, body);
+		this.eyes=eyes;
+		this.legs=legs;
+		this.tail=tail;
+	}
+	public void chew() {
+		Sysem.out.println("chewing..");
+	}
+	
+
+}
