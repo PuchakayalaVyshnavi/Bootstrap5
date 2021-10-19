@@ -4,7 +4,7 @@ info:
   version: '1.0'
   description: This is the first api
 servers:
-  - url: 'http://localhost:3000'
+  - url: 'http://todos.stoplight.io'
 paths:
   /todos:
     get:
@@ -76,6 +76,10 @@ paths:
               $ref: '#/components/schemas/Todos'
       tags:
         - Todos
+      parameters:
+        - schema:
+            type: string
+          in: header
     delete:
       summary: Delete Todo
       operationId: delete-todos-id
@@ -86,6 +90,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Todos'
+      parameters:
+        - schema:
+            type: string
+          in: header
+      security:
+        - APIKey: []
 components:
   schemas:
     Todos:
