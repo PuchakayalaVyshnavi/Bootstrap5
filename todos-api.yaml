@@ -24,6 +24,7 @@ paths:
       description: Returns list of Todos
       parameters:
         - $ref: '#/components/parameters/limit'
+      x-internal: false
     post:
       summary: Create Todo
       operationId: post-todos
@@ -75,6 +76,16 @@ paths:
               $ref: '#/components/schemas/Todos'
       tags:
         - Todos
+    delete:
+      summary: Delete Todo
+      operationId: delete-todos-id
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todos'
 components:
   schemas:
     Todos:
