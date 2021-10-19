@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "type": "item",
+      "title": "Terms-and-conditions",
+      "uri": "docs/Terms-and-conditions.md"
+    },
+    {
+      "type": "divider",
+      "title": "APIS"
+    },
+    {
+      "type": "item",
+      "title": "To-dos",
+      "uri": "todos-api.yaml"
+    }
+  ]
+}
