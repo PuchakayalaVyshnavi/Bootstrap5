@@ -1,0 +1,148 @@
+openapi: 3.1.0
+info:
+  title: To-dos
+  version: '1.0'
+  description: This is the first api
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /todos:
+    get:
+      summary: List Todos
+      tags:
+        - Todos
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Todos'
+      operationId: get-todos
+      description: Returns list of Todos
+      parameters:
+        - $ref: '#/components/parameters/limit'
+    post:
+      summary: Create Todo
+      operationId: post-todos
+      responses:
+        '200':
+          description: OK
+        '401':
+          $ref: '#/components/responses/401'
+      description: This creates todo object
+      parameters:
+        - $ref: '#/components/parameters/contentType'
+      tags:
+        - Todos
+  '/todos/{id}':
+    parameters:
+      - schema:
+          type: string
+        name: id
+        in: path
+        required: true
+    get:
+      summary: Get Todo
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todos'
+      operationId: get-todos-id
+      description: Returns single Todo
+      tags:
+        - Todos
+    put:
+      summary: Update Todo
+      operationId: put-todos-id
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todos'
+      description: update the todo
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Todos'
+      tags:
+        - Todos
+components:
+  schemas:
+    Todos:
+      description: ''
+      type: object
+      x-examples:
+        example-1:
+          id: 0
+          name: string
+          completed: true
+          completed_at: datetime
+          deleted_at: datetime
+          updated_at: datetime
+      properties:
+        id:
+          type: number
+        name:
+          type: string
+          minLength: 1
+        completed:
+          type: boolean
+        completed_at:
+          type: string
+          minLength: 1
+          format: date-time
+        deleted_at:
+          type: string
+          minLength: 1
+          format: date-time
+        updated_at:
+          type: string
+          minLength: 1
+          format: date-time
+      required:
+        - id
+        - name
+        - completed
+        - completed_at
+        - deleted_at
+        - updated_at
+      x-tags:
+        - Todos
+  securitySchemes:
+    APIKey:
+      name: apiKey
+      type: apiKey
+      in: header
+  parameters:
+    limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Returns a list of result
+    contentType:
+      name: Content-Type
+      in: header
+      required: false
+      schema:
+        type: string
+      description: application/json
+  responses:
+    '401':
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: ./Error.v1.yaml
+security:
+  - API Key - 1: []
