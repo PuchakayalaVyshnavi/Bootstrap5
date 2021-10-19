@@ -1,6 +1,0 @@
-#Tomcat publish data
-#Wed Aug 18 18:54:15 IST 2021
-org.eclipse.jst.jee.server\:jstlDemo=C\:\\Program Files (x86)\\Apache Software Foundation\\Tomcat 9.0\\apache-tomcat-9.0.46\\wtpwebapps\\jstlDemo
-org.eclipse.jst.jee.server\:hello=C\:\\Program Files (x86)\\Apache Software Foundation\\Tomcat 9.0\\apache-tomcat-9.0.46\\wtpwebapps\\hello
-org.eclipse.jst.jee.server\:jspdemo=C\:\\Program Files (x86)\\Apache Software Foundation\\Tomcat 9.0\\apache-tomcat-9.0.46\\wtpwebapps\\jspdemo
-org.eclipse.jst.jee.server\:demo=C\:\\Program Files (x86)\\Apache Software Foundation\\Tomcat 9.0\\apache-tomcat-9.0.46\\wtpwebapps\\demo

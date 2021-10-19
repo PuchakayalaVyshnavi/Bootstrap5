@@ -1,6 +1,0 @@
-package interfac;
-
-public class DeskPhone {
- private int myNumber;
- private boolean isRinging;	
-}

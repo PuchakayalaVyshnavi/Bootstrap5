@@ -1,6 +1,0 @@
-package array;
-
-public class ArrayList {
-	 private ArrayList<String> groceryList=new ArrayList<String>();
-
-}
