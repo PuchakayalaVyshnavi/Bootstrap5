@@ -1,0 +1,111 @@
+openapi: 3.1.0
+info:
+  title: React
+  version: '1.0'
+  description: Users API
+servers:
+  - url: 'http://users.stoplight.io'
+paths:
+  /users:
+    get:
+      summary: Get User
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+      operationId: get-users
+      description: Get the User
+      parameters:
+        - $ref: '#/components/parameters/id'
+    post:
+      summary: Create User
+      operationId: post-users
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '401':
+          description: Unauthorized
+      description: Creating the User
+      parameters:
+        - $ref: ../todos-api.yaml#/components/parameters/contentType
+        - schema:
+            type: string
+          in: header
+        - $ref: '#/components/parameters/id'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+    put:
+      summary: Update User
+      operationId: put-users
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+      description: update the user
+      parameters:
+        - $ref: '#/components/parameters/id'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+    delete:
+      summary: Delete the User
+      operationId: delete-users
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+      description: Delete the User
+      parameters:
+        - $ref: '#/components/parameters/id'
+components:
+  schemas:
+    User:
+      title: User
+      type: object
+      properties:
+        name:
+          type: string
+        id:
+          type: string
+        notes:
+          type: string
+      required:
+        - id
+      examples: []
+      x-internal: false
+  securitySchemes:
+    API Key - 1:
+      name: APIKey
+      type: apiKey
+      in: header
+  parameters:
+    id:
+      name: id
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Return a id of user

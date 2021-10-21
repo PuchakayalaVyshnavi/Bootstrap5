@@ -25,6 +25,13 @@ paths:
       parameters:
         - $ref: '#/components/parameters/limit'
       x-internal: false
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+        description: ''
     post:
       summary: Create Todo
       operationId: post-todos
