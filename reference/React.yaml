@@ -4,7 +4,7 @@ info:
   version: '2.0'
   description: Users API
 servers:
-  - url: 'http://users.stoplight.io'
+  - url: 'http://users.example.com'
 paths:
   /users:
     get:
@@ -97,10 +97,10 @@ components:
       examples: []
       x-internal: false
   securitySchemes:
-     api_key:
-        name: APIKey
-        type: apiKey
-        in: header
+    api_key:
+      name: APIKey
+      type: apiKey
+      in: header
   parameters:
     id:
       name: id
