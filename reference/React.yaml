@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: React
-  version: '1.0'
+  version: '2.0'
   description: Users API
 servers:
   - url: 'http://users.stoplight.io'
