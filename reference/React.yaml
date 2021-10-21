@@ -97,10 +97,10 @@ components:
       examples: []
       x-internal: false
   securitySchemes:
-    API Key - 1:
-      name: APIKey
-      type: apiKey
-      in: header
+     api_key:
+        name: APIKey
+        type: apiKey
+        in: header
   parameters:
     id:
       name: id
